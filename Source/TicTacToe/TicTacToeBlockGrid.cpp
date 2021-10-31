@@ -44,7 +44,7 @@ ATicTacToeBlockGrid::ATicTacToeBlockGrid()
 	WinMaterial = ConstructorStatics.WinMaterial.Get();
 
 	// Set defaults
-	Size = 3;
+	Size = 5;
 	BlockSpacing = 300.f;
 	totalBlocks = Size * Size;
 	destroyDelay = 2.f;
@@ -127,11 +127,12 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 {
 	//** NOTE: Look into a better way for automation of win conditions based on grid size **//
 
-	if ((blocksOnGrid[6]->p1Owned && blocksOnGrid[7]->p1Owned && blocksOnGrid[8]->p1Owned))
+	//** Horizontal Conditions **//
+	if ((blocksOnGrid[20]->p1Owned && blocksOnGrid[21]->p1Owned && blocksOnGrid[22]->p1Owned))
 	{
-		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
 		AddScore(1);
@@ -139,11 +140,131 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[3]->p1Owned && blocksOnGrid[4]->p1Owned && blocksOnGrid[5]->p1Owned))
+	else if ((blocksOnGrid[22]->p1Owned && blocksOnGrid[23]->p1Owned && blocksOnGrid[24]->p1Owned))
 	{
-		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[21]->p1Owned && blocksOnGrid[22]->p1Owned && blocksOnGrid[23]->p1Owned))
+	{
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[15]->p1Owned && blocksOnGrid[16]->p1Owned && blocksOnGrid[17]->p1Owned))
+	{
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[17]->p1Owned && blocksOnGrid[18]->p1Owned && blocksOnGrid[19]->p1Owned))
+	{
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p1Owned && blocksOnGrid[17]->p1Owned && blocksOnGrid[18]->p1Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[10]->p1Owned && blocksOnGrid[11]->p1Owned && blocksOnGrid[12]->p1Owned))
+	{
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p1Owned && blocksOnGrid[13]->p1Owned && blocksOnGrid[14]->p1Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[11]->p1Owned && blocksOnGrid[12]->p1Owned && blocksOnGrid[13]->p1Owned))
+	{
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[5]->p1Owned && blocksOnGrid[6]->p1Owned && blocksOnGrid[7]->p1Owned))
+	{
 		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[7]->p1Owned && blocksOnGrid[8]->p1Owned && blocksOnGrid[9]->p1Owned))
+	{
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[6]->p1Owned && blocksOnGrid[7]->p1Owned && blocksOnGrid[8]->p1Owned))
+	{
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
 		AddScore(1);
@@ -163,10 +284,95 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[0]->p1Owned && blocksOnGrid[3]->p1Owned && blocksOnGrid[6]->p1Owned))
+	else if ((blocksOnGrid[2]->p1Owned && blocksOnGrid[3]->p1Owned && blocksOnGrid[4]->p1Owned))
 	{
-		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[1]->p1Owned && blocksOnGrid[2]->p1Owned && blocksOnGrid[3]->p1Owned))
+	{
+		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	//** Vertical Conditions **//
+	else if ((blocksOnGrid[20]->p1Owned && blocksOnGrid[15]->p1Owned && blocksOnGrid[10]->p1Owned))
+	{
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[10]->p1Owned && blocksOnGrid[5]->p1Owned && blocksOnGrid[0]->p1Owned))
+	{
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[15]->p1Owned && blocksOnGrid[10]->p1Owned && blocksOnGrid[5]->p1Owned))
+	{
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[21]->p1Owned && blocksOnGrid[16]->p1Owned && blocksOnGrid[11]->p1Owned))
+	{
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[11]->p1Owned && blocksOnGrid[6]->p1Owned && blocksOnGrid[1]->p1Owned))
+	{
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p1Owned && blocksOnGrid[11]->p1Owned && blocksOnGrid[6]->p1Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
@@ -175,10 +381,34 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[1]->p1Owned && blocksOnGrid[4]->p1Owned && blocksOnGrid[7]->p1Owned))
+	else if ((blocksOnGrid[22]->p1Owned && blocksOnGrid[17]->p1Owned && blocksOnGrid[12]->p1Owned))
 	{
-		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p1Owned && blocksOnGrid[7]->p1Owned && blocksOnGrid[2]->p1Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[17]->p1Owned && blocksOnGrid[12]->p1Owned && blocksOnGrid[7]->p1Owned))
+	{
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
@@ -187,10 +417,34 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[2]->p1Owned && blocksOnGrid[5]->p1Owned && blocksOnGrid[8]->p1Owned))
+	else if ((blocksOnGrid[23]->p1Owned && blocksOnGrid[18]->p1Owned && blocksOnGrid[13]->p1Owned))
 	{
-		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[13]->p1Owned && blocksOnGrid[8]->p1Owned && blocksOnGrid[3]->p1Owned))
+	{
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[18]->p1Owned && blocksOnGrid[13]->p1Owned && blocksOnGrid[8]->p1Owned))
+	{
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
@@ -199,11 +453,96 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[2]->p1Owned && blocksOnGrid[4]->p1Owned && blocksOnGrid[6]->p1Owned))
+	else if ((blocksOnGrid[24]->p1Owned && blocksOnGrid[19]->p1Owned && blocksOnGrid[14]->p1Owned))
 	{
-		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[14]->p1Owned && blocksOnGrid[9]->p1Owned && blocksOnGrid[4]->p1Owned))
+	{
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[19]->p1Owned && blocksOnGrid[14]->p1Owned && blocksOnGrid[9]->p1Owned))
+	{
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	//** Diagonal Conditions **//
+	else if ((blocksOnGrid[20]->p1Owned && blocksOnGrid[16]->p1Owned && blocksOnGrid[12]->p1Owned))
+	{
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p1Owned && blocksOnGrid[8]->p1Owned && blocksOnGrid[4]->p1Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p1Owned && blocksOnGrid[12]->p1Owned && blocksOnGrid[8]->p1Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[24]->p1Owned && blocksOnGrid[18]->p1Owned && blocksOnGrid[12]->p1Owned))
+	{
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Yellow, "Player 1 Wins!");
+		AddScore(1);
+		SwitchPlayersByWin(1);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p1Owned && blocksOnGrid[6]->p1Owned && blocksOnGrid[0]->p1Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
 		AddScore(1);
@@ -211,11 +550,11 @@ bool ATicTacToeBlockGrid::Player1WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[0]->p1Owned && blocksOnGrid[4]->p1Owned && blocksOnGrid[8]->p1Owned))
+	else if ((blocksOnGrid[18]->p1Owned && blocksOnGrid[12]->p1Owned && blocksOnGrid[6]->p1Owned))
 	{
-		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Yellow, "Player 1 Wins!");
 		AddScore(1);
@@ -231,11 +570,12 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 {
 	//** NOTE: Look into a better way for automation of win conditions based on grid size **//
 
-	if ((blocksOnGrid[6]->p2Owned && blocksOnGrid[7]->p2Owned && blocksOnGrid[8]->p2Owned))
+	//** Horizontal Conditions **//
+	if ((blocksOnGrid[20]->p2Owned && blocksOnGrid[21]->p2Owned && blocksOnGrid[22]->p2Owned))
 	{
-		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
 		AddScore(2);
@@ -243,11 +583,131 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[3]->p2Owned && blocksOnGrid[4]->p2Owned && blocksOnGrid[5]->p2Owned))
+	else if ((blocksOnGrid[22]->p2Owned && blocksOnGrid[23]->p2Owned && blocksOnGrid[24]->p2Owned))
 	{
-		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[21]->p2Owned && blocksOnGrid[22]->p2Owned && blocksOnGrid[23]->p2Owned))
+	{
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[15]->p2Owned && blocksOnGrid[16]->p2Owned && blocksOnGrid[17]->p2Owned))
+	{
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[17]->p2Owned && blocksOnGrid[18]->p2Owned && blocksOnGrid[19]->p2Owned))
+	{
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p2Owned && blocksOnGrid[17]->p2Owned && blocksOnGrid[18]->p2Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[10]->p2Owned && blocksOnGrid[11]->p2Owned && blocksOnGrid[12]->p2Owned))
+	{
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p2Owned && blocksOnGrid[13]->p2Owned && blocksOnGrid[14]->p2Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[11]->p2Owned && blocksOnGrid[12]->p2Owned && blocksOnGrid[13]->p2Owned))
+	{
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[5]->p2Owned && blocksOnGrid[6]->p2Owned && blocksOnGrid[7]->p2Owned))
+	{
 		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[7]->p2Owned && blocksOnGrid[8]->p2Owned && blocksOnGrid[9]->p2Owned))
+	{
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[6]->p2Owned && blocksOnGrid[7]->p2Owned && blocksOnGrid[8]->p2Owned))
+	{
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
 		AddScore(2);
@@ -267,10 +727,95 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[0]->p2Owned && blocksOnGrid[3]->p2Owned && blocksOnGrid[6]->p2Owned))
+	else if ((blocksOnGrid[2]->p2Owned && blocksOnGrid[3]->p2Owned && blocksOnGrid[4]->p2Owned))
 	{
-		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[1]->p2Owned && blocksOnGrid[2]->p2Owned && blocksOnGrid[3]->p2Owned))
+	{
+		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	//** Vertical Conditions **//
+	else if ((blocksOnGrid[20]->p2Owned && blocksOnGrid[15]->p2Owned && blocksOnGrid[10]->p2Owned))
+	{
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[10]->p2Owned && blocksOnGrid[5]->p2Owned && blocksOnGrid[0]->p2Owned))
+	{
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[15]->p2Owned && blocksOnGrid[10]->p2Owned && blocksOnGrid[5]->p2Owned))
+	{
+		blocksOnGrid[15]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[10]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[21]->p2Owned && blocksOnGrid[16]->p2Owned && blocksOnGrid[11]->p2Owned))
+	{
+		blocksOnGrid[21]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[11]->p2Owned && blocksOnGrid[6]->p2Owned && blocksOnGrid[1]->p2Owned))
+	{
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p2Owned && blocksOnGrid[11]->p2Owned && blocksOnGrid[6]->p2Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[11]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
@@ -279,10 +824,34 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[1]->p2Owned && blocksOnGrid[4]->p2Owned && blocksOnGrid[7]->p2Owned))
+	else if ((blocksOnGrid[22]->p2Owned && blocksOnGrid[17]->p2Owned && blocksOnGrid[12]->p2Owned))
 	{
-		blocksOnGrid[1]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[22]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p2Owned && blocksOnGrid[7]->p2Owned && blocksOnGrid[2]->p2Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[17]->p2Owned && blocksOnGrid[12]->p2Owned && blocksOnGrid[7]->p2Owned))
+	{
+		blocksOnGrid[17]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[7]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
@@ -291,10 +860,34 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[2]->p2Owned && blocksOnGrid[5]->p2Owned && blocksOnGrid[8]->p2Owned))
+	else if ((blocksOnGrid[23]->p2Owned && blocksOnGrid[18]->p2Owned && blocksOnGrid[13]->p2Owned))
 	{
-		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[5]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[23]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[13]->p2Owned && blocksOnGrid[8]->p2Owned && blocksOnGrid[3]->p2Owned))
+	{
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[3]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[18]->p2Owned && blocksOnGrid[13]->p2Owned && blocksOnGrid[8]->p2Owned))
+	{
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[13]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
@@ -303,11 +896,96 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[2]->p2Owned && blocksOnGrid[4]->p2Owned && blocksOnGrid[6]->p2Owned))
+	else if ((blocksOnGrid[24]->p2Owned && blocksOnGrid[19]->p2Owned && blocksOnGrid[14]->p2Owned))
 	{
-		blocksOnGrid[2]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[14]->p2Owned && blocksOnGrid[9]->p2Owned && blocksOnGrid[4]->p2Owned))
+	{
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[19]->p2Owned && blocksOnGrid[14]->p2Owned && blocksOnGrid[9]->p2Owned))
+	{
+		blocksOnGrid[19]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[14]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[9]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	//** Diagonal Conditions **//
+	else if ((blocksOnGrid[20]->p2Owned && blocksOnGrid[16]->p2Owned && blocksOnGrid[12]->p2Owned))
+	{
+		blocksOnGrid[20]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p2Owned && blocksOnGrid[8]->p2Owned && blocksOnGrid[4]->p2Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[16]->p2Owned && blocksOnGrid[12]->p2Owned && blocksOnGrid[8]->p2Owned))
+	{
+		blocksOnGrid[16]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[24]->p2Owned && blocksOnGrid[18]->p2Owned && blocksOnGrid[12]->p2Owned))
+	{
+		blocksOnGrid[24]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+
+		DebugMessage(FColor::Red, "Player 2 Wins!");
+		AddScore(2);
+		SwitchPlayersByWin(2);
+		gameCompleted = endGame = true;
+		return true;
+	}
+	else if ((blocksOnGrid[12]->p2Owned && blocksOnGrid[6]->p2Owned && blocksOnGrid[0]->p2Owned))
+	{
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
 		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
 		AddScore(2);
@@ -315,11 +993,11 @@ bool ATicTacToeBlockGrid::Player2WinCheck()
 		gameCompleted = endGame = true;
 		return true;
 	}
-	else if ((blocksOnGrid[0]->p2Owned && blocksOnGrid[4]->p2Owned && blocksOnGrid[8]->p2Owned))
+	else if ((blocksOnGrid[18]->p2Owned && blocksOnGrid[12]->p2Owned && blocksOnGrid[6]->p2Owned))
 	{
-		blocksOnGrid[0]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[4]->DispatchMaterialChange(0, WinMaterial);
-		blocksOnGrid[8]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[18]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[12]->DispatchMaterialChange(0, WinMaterial);
+		blocksOnGrid[6]->DispatchMaterialChange(0, WinMaterial);
 
 		DebugMessage(FColor::Red, "Player 2 Wins!");
 		AddScore(2);
