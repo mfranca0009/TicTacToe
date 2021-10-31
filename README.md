@@ -2,6 +2,8 @@
 
 Tic-Tac-Toe for a class project related to Unreal Game Programming with C++.
 
+5x5gridmatch3 branch offers a modified version of Tic-Tac-Toe with a 5x5 grid that still requires matching 3 blocks to win the round.
+
 # Controls
 
 [Left Mouse Button] - Activate a block
